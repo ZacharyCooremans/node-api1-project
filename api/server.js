@@ -99,7 +99,7 @@ server.put('/api/users/:id', (req, res) => {
                         message: "The user with the specified ID does not exist"
                     })
                 } else {
-                    res.json(updated)
+                    res.status(200).json(updated)
                 }
             })
             .catch(() => {
